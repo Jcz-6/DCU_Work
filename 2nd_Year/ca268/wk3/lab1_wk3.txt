@@ -1,0 +1,37 @@
+Q1
+
+O(n); the time complexity is N as there is a single loop that will
+go on for N amount on times depending on the input
+
+******************************
+
+Q2
+
+O(log N); is the time complexity of this algorithm as the input size
+is halved each
+
+******************************
+
+Q3
+
+O(n); is the time complexity of this algorithm as there is two loops that will go on N amount of times depending on the input site
+
+******************************
+
+Q4
+
+O(log N); is the time complexity of this algorithm as the while loop will go around N times but it cut in half the amount of loops each time it goes around
+
+*****************************
+
+Q5
+
+O(n^2); is the time complexity of this algorithm as there is a loop that goes around N times and a nested loops that will go N times everytime the parent loop goes once
+
+*****************************
+
+Q6
+
+O(2^n); is the time complexity of this algorithm as each iteration of this recursive loop will call it self twice for each input
+
+*****************************

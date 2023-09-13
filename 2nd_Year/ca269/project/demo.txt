@@ -1,0 +1,53 @@
+New Person Added: 
+=> URI: https://www.java-soc.com/dn/
+=> Name: Jakub
+
+New Person Added: 
+=> URI: https://www.java-soc.com/funnyman/
+=> Name: Josh
+
+dn Adds Create activity to Oubox:
+=> URI: https://www.java-soc.com/Jakub/#Create/FunnyPost1
+=> Type: FunnyPost
+=> Audience: GLOBAL
+=> Amount of Likes: 0
+=> Amount of Shares: 0
+=> Content: Yet another unfunny post online
+=> Name: Deez Nuts Joke
+=> Published: 06/04/2023
+=> Deleted: false
+
+funnyman Adds a Follow activity to Oubox 
+=> URI : https://www.java-soc.com/funnyman/#Follows/dn
+=> Summary : funnyman Followed dn
+=> Actor : https://www.java-soc.com/funnyman/
+=> Person : https://www.java-soc.com/dn/
+
+dn received class Follow to Inbox 
+=> URI: https://www.java-soc.com/funnyman/#Follows/dn
+
+funnyman Adds a Like activity to Oubox 
+=> URI : https://www.java-soc.com/Josh/#Like/FunnyPost_1
+=> Summary : funnyman Liked https://www.java-soc.com/dn/#Create/FunnyPost_1
+=> Actor : https://www.java-soc.com/funnyman/
+=> StreamObject : https://www.java-soc.com/dn/#Create/FunnyPost_1
+
+funnyman received class Like to Inbox 
+=> URI: https://www.java-soc.com/Josh/#Like/FunnyPost_1
+
+dn Adds a Delete activity to Outbox 
+=> URI : https://www.java-soc.com/dn/#Delete/FunnyPost1
+=> Summary : dn Deleted https://www.java-soc.com/Jakub/#Create/FunnyPost1
+=> Actor : https://www.java-soc.com/dn/
+=> Person : https://www.java-soc.com/Jakub/#Create/FunnyPost1
+
+funnyman Adds a Unfollow activity to Oubox 
+=> URI : https://www.java-soc.com/funnyman/#Unfollows/dn
+=> Summary : funnyman Unfollowed dn
+=> Actor : https://www.java-soc.com/funnyman/
+=> Person : https://www.java-soc.com/dn/
+
+dn received class Unfollow to Inbox 
+=> URI: https://www.java-soc.com/funnyman/#Unfollows/dn
+
+

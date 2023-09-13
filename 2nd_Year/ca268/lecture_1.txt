@@ -1,0 +1,34 @@
+ADT (abstract data type) <-------- lists stacks etc
+has methologies that we dont define
+** are preset in a class **
+
+Top stack
+can include any data 
+
+------------------------------------------------
+
+in python we manipulate lists into stacks
+
+cant use original data structure methods when you make a class
+only defined methods can be used
+
+****example****
+	we cant use .append()
+	on a stack made from a list
+
+-----------------------------------------------
+
+Deques is a double sided Queue
+can be popped from top or bot
+
+D.add_first(e): add element at front of Deque D position 0
+D.add_last(e)  			^ but the end
+D.delete_first() remove and return the first element from Deque
+D.delete_last() remove and return the last elemnt form Deque
+
+rest of defs are the same as for other data types
+
+
+
+
+

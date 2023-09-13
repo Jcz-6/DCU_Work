@@ -1,0 +1,19 @@
+to initialize a array in C
+
+***do***
+int length = 10;
+int grades[length]; <--- instead of lenght we can put an integer
+
+all the values in an array in C
+have to be of the same type !!!
+
+if we initialize a lenght 4 and make array of lenght 5
+it will put a 0 in there <---- dont do it unreliable
+
+
+USE COMENTS TO EXPLAIN UR PROGRAMNS DONT BE STUPID
+:)
+
+int sumOfEachLine[3] = {0}
+sumOfeachline[i] += numbers2D[i][j]:
+

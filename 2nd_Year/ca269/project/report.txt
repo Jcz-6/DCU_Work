@@ -1,0 +1,36 @@
+                ########### Highlights ###########
+My JavaSoc project has classes for all the various activities,
+a StreamObject class and a Person class which all function with eachother
+on top of that all the interfaces have been implemented correctly. To store 
+the activities I used array list of type Activity but there is a seperate list
+for each type (likes, posted, following) etc. For the inbox and outbox I used
+LinkedList Queue, there is various toString methods included as well which makes
+the demo function cleaner.
+
+                ########### Limitations ###########
+My project definitely has some limitations, I dont have a switch user function
+which would allow multiple inboxes and outboxes to be displayed using the
+getOubox/Inbox() function, on top of that the activities are stored as Type
+Activity in their respective lists therefore they only have the getURI() method
+due to the interfaces implemented in this task also there is some print statements
+instead of all being toString's, somethings need to be done manually like updating
+lists storing activities.
+
+                 ########### Testing ###########
+I tested my code by passing it different activities from one persons Outbox
+to the other Inbox and the code functions as expected on top of that I checked
+that the outboxes and inboxes were actually updated by checking their lenght,
+I also got the code reviewed by my peers to look for desing flaws and to run it 
+on their machienes.
+
+                 ########### Future Plans ###########
+I would definitely change the interfaces that we had to implement, change up the
+way I store the activities to store actual objects(Like etc.) instead of Activity ones to
+preserve their methods and variables, desing Activities around a abstract class
+similarly with the StreamObjects, allow for multiple users at once, have the inbox
+and outbox automatically update the corresponding list depending on the Activity uri.
+
+                 ########### References ###########
+            https://www.w3.org/TR/activitystreams-vocabulary/
+                  https://www.w3.org/TR/activitypub/
+            https://ca269.computing.dcu.ie/notes-project.html

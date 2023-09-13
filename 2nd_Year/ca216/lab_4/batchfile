@@ -1,0 +1,8 @@
+dir
+cd test
+cd ..
+cd ..
+cd lab_4
+cd
+cat < dn.txt
+python3 dn.py

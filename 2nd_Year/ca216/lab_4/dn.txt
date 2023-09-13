@@ -1,0 +1,17 @@
+total 140
+drwxr-xr-x 4 dn dn  4096 Mar 14 09:46 .
+drwxr-xr-x 7 dn dn  4096 Feb 21 09:26 ..
+drwxr-xr-x 2 dn dn  4096 Mar  9 11:04 .vscode
+-rw-r--r-- 1 dn dn    62 Mar 14 09:26 batchfile
+-rwxr-xr-x 1 dn dn 16736 Mar  7 21:42 dn
+-rw-r--r-- 1 dn dn   222 Mar  7 21:42 dn.c
+-rw-r--r-- 1 dn dn    36 Mar  9 17:18 dn.py
+-rw-r--r-- 1 dn dn     0 Mar 14 10:05 dn.txt
+-rwxr-xr-x 1 dn dn 30424 Mar 14 09:46 my_shell
+-rw-r--r-- 1 dn dn 13448 Mar 14 09:49 my_shell.c
+-rwxr-xr-x 1 dn dn 16992 Feb  7 10:03 sleepy
+-rw-r--r-- 1 dn dn   826 Feb  7 10:07 sleepy.c
+drwxr-xr-x 2 dn dn  4096 Feb 23 15:32 test
+-rw-r--r-- 1 dn dn    78 Mar  7 20:27 test.txt
+-rw-r--r-- 1 dn dn  9553 Mar 14 09:45 utility.c
+-rw-r--r-- 1 dn dn   658 Mar 14 09:33 utility.h
