@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}
+    <h1>Books {{ borrowings.cust.name }} has borrowed.</h1>
+{% endblock %}
+
+{% block content %}
+    <h2>Hello</h2>
+
+    <div class="card-group">
+        {% for b in borrowings %}
+
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">{{b.books.title}}</h5>
+                  <p>{{b.books.synopsis}}</p>
+                  <p>Price: {{b.books.price}}</p>
+                </div>
+                <div class="card-footer">
+                    <p>Author: {{b.books.author}}, Published in {{b.books.year}}</p>
+                </div>
+            </div>
+        {% endfor %}
+
+      </div>
+
+
+
+{% endblock %}

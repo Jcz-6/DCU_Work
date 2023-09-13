@@ -1,0 +1,19 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            fetch('https://swapi.dev/api/planets/1')
+            .then(response => response.json())
+            .then(planet =>{
+                let attrs = ["name", "diameter", "climate", "terrain", "population"]
+                attrs.forEach(element => {
+                    let new_p = document.createElement("p");
+                    new_p.innerHTML = element.toUpperCase()+ ": " + planet[element];
+                    document.body.appendChild(new_p);
+                    console.log(planet[element]);
+                });
+            });
+        </script>
+    </body>
+</html>

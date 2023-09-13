@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block title %}
+    Library
+{% endblock %}
+
+{% block content %}
+    <h1>Here are the books borrowed and returned by {{cust.name}}</h1>
+
+
+      <h2>Returned Books</h2>
+    {% if returned %}
+
+    {% for borrowed in returned %}
+      <div class="card-group">
+
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">{{borrowed.books.title}}</h5>
+              <p>{{borrowed.books.synopsis}}</p>
+              <p>Price: {{borrowed.books.price}}</p>
+            </div>
+            <div class="card-footer">
+                <p>Author: {{borrowed.books.author}}, Published in {{borrowed.books.year}}</p>
+            </div>
+        </div>
+
+     </div>
+    {% endfor %}
+
+    {% endif %}
+     <h2>Borrowed Books</h2>
+    {% if not_returned %}
+
+    {% for borrowed in not_returned %}
+     <div class="card-group">
+
+       <div class="card" style="width: 18rem;">
+           <div class="card-body">
+             <h5 class="card-title">{{borrowed.books.title}}</h5>
+             <p>{{borrowed.books.synopsis}}</p>
+             <p>Price: {{borrowed.books.price}}</p>
+           </div>
+           <div class="card-footer">
+               <p>Author: {{borrowed.books.author}}, Published in {{borrowed.books.year}}</p>
+           </div>
+       </div>
+
+        </div>
+    {% endfor %}
+    
+    {% endif %}
+{% endblock %}

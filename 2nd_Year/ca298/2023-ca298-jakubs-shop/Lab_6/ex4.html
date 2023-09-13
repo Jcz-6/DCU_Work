@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>Adding two numbers</title>
+	</head>
+	<body>
+        <form id="myform">
+            <label for="form-username-input">First Number</label>
+            <input type="text" name="form-number-input" id="number-input-1" placeholder="First number here">
+            <label for="form-username-input">Second Number</label>
+            <input type="text" name="form-number-input" id="number-input-2" placeholder="Second number here">
+            <button type="submit">Submit</button>
+        </form>
+        <script>
+            function formValidator(event){
+                event.preventDefault(); // always prevent default events when using javascript
+                // get the value the in the username box 
+                let first_number= document.getElementById("number-input-1").value;
+                let second_number= document.getElementById("number-input-2").value;
+                // get the value in the password box
+                if( first_number == ""){
+                    alert("First number input cannot be null");
+                }
+                else if(isNaN(first_number)){
+                    alert("Please input a number for the field First number");
+                }
+                else if( second_number == ""){
+                    alert("Second number input cannot be null");
+                }
+                else if(isNaN(second_number)){
+                    alert("Please input a number for the field Second number");
+                }
+                else{
+                    let sum = 0;
+                    sum = parseInt(first_number) + parseInt(second_number);
+                    let new_p = document.createElement("p");
+                    new_p.innerHTML = "Result = " + sum;
+                    document.body.appendChild(new_p);
+                }
+            }
+            let myform = document.getElementById("myform"); // get the form 
+            myform.addEventListener('submit', formValidator);// bind the validator function to the submit button for the form
+        </script>
+	</body>
+</html>

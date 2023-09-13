@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title>Element selection example</title>
+	</head>
+	<body>
+		<p id="new_paragraph">Useless paragraph</p>
+        <button id="mybutton"> Change colour</button>
+		<script>
+            let specificPTag = document.getElementById("new_paragraph"); // returns the specific DOM node , the P tag with id="myparagraphid"
+            specificPTag.innerHTML="Hello from Javascript";
+
+            function changeColour(event){
+                specificPTag.style.color = "red";
+            }
+
+            let colour_button = document.getElementById("mybutton");
+            colour_button.addEventListener("click", changeColour)
+		</script>
+	</body>
+</html>

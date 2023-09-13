@@ -1,0 +1,19 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <img id="random-image">
+        <button id="mybutton"> Random Dog</button>
+        <script>
+            function change_dog(event){
+            fetch('https://dog.ceo/api/breeds/image/random')
+            .then(response => response.json())
+            .then(dog =>{
+                let image = document.getElementById("random-image").src = dog.message;
+            })};
+
+            let new_dog = document.getElementById("mybutton");
+            new_dog.addEventListener('click', change_dog)
+        </script>
+    </body>
+</html>
