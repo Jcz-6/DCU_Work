@@ -1,9 +1,0 @@
-[submodule "2nd_Year/ca216/2023-ca216-myshell"]
-	path = 2nd_Year/ca216/2023-ca216-myshell
-	url = git@gitlab.computing.dcu.ie:czernij2/2023-ca216-myshell.git
-[submodule "2nd_Year/ca298/project"]
-	path = 2nd_Year/ca298/project
-	url = git@gitlab.computing.dcu.ie:czernij2/project.git
-[submodule "2nd_Year/ca298/2023-ca298-jakubs-shop"]
-	path = 2nd_Year/ca298/2023-ca298-jakubs-shop
-	url = git@gitlab.computing.dcu.ie:czernij2/2023-ca298-jakubs-shop.git
