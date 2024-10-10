@@ -1,0 +1,42 @@
+////
+The format of this document is `asciidoc`, and it will be compiled with:
+
+   $ asciidoctor task-description.ascii
+
+This generates the HTML which will be included on the website.
+////
+= Euler 119
+
+****
+Euler problem 119: https://projecteuler.net/problem=119[].
+****
+
+// //////////////////////////////////////////////////////////////
+== Go
+
+.Task
+****
+The command-line arguments consist of exactly one argument, a positive integer $n$.
+
+Write a Go script named `euler-119-digit-power-sum.kt` which writes number indexed at the command line
+argument $n$ of the series of numbers that the sum of the digits raised to some power return the number 
+
+
+Upload your solution to https://euler.computing.dcu.ie/einstein/[_Einstein_].
+****
+
+.Example invocation
+----
+$ java -jar euler-119-digit-power-sum.jar 1
+----
+
+.Example standard output
+----
+81
+----
+
+.Explanation
+****
+81 = 8 + 1 = 9^2
+****
+

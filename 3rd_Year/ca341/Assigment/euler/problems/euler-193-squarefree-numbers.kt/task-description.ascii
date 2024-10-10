@@ -1,0 +1,33 @@
+= Euler 193
+
+****
+Euler problem 193: https://projecteuler.net/problem=193[].
+****
+
+// //////////////////////////////////////////////////////////////
+== Kotlin
+
+.Task
+****
+The command-line arguments consist of exactly one argument, a positive integer $n$.
+
+A number is called squarefree if no squared prime numbers divide's it.
+
+Thus 1,2,3,5,6,7,10,11 are squarefree but not 4,6,8,12.
+
+Write a Kotlin script named `euler-193-squarefree-numbers.kt` which outputs all the numbers which are squarefree
+up the integer $n$.
+
+
+Upload your solution to https://euler.computing.dcu.ie/einstein/[_Einstein_].
+****
+
+.Example invocation
+----
+$ java -jar euler-193-squarefree-numbers.jar 12
+----
+
+.Example standard output
+----
+8
+----

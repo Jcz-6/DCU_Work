@@ -1,0 +1,39 @@
+////
+The format of this document is `asciidoc`, and it will be compiled with:
+
+   $ asciidoctor task-description.ascii
+
+This generates the HTML which will be included on the website.
+////
+= Euler 204
+
+****
+Euler problem 204: https://projecteuler.net/problem=204[].
+****
+
+// //////////////////////////////////////////////////////////////
+== Kotlin
+
+.Task
+****
+The command-line arguments consist of exactly two argument, a positive integer $x$ and $y$
+where $x$ is the power of 10 and $y$ being the limit for our prime numbers i.e all prime numbers below $y$.
+
+Write a Kotlin script named `euler-204-generalised-hamming-numbers.kt` which writes all the Y type humming numbers
+that are less than 10 to the power of X
+
+
+Upload your solution to https://euler.computing.dcu.ie/einstein/[_Einstein_].
+****
+
+.Example invocation
+----
+$ java -jar euler-204-generalised-hamming-numbers.jar 8 5
+----
+
+.Example standard output
+----
+1105
+----
+
+

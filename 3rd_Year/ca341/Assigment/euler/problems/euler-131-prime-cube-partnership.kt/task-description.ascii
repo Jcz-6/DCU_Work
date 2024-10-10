@@ -1,0 +1,41 @@
+////
+The format of this document is `asciidoc`, and it will be compiled with:
+
+   $ asciidoctor task-description.ascii
+
+This generates the HTML which will be included on the website.
+////
+= Euler 131
+
+****
+Euler problem 131: https://projecteuler.net/problem=131[].
+****
+
+// //////////////////////////////////////////////////////////////
+== Kotlin
+
+.Task
+****
+Write a program in Go called `euler-131-prime-cube-partnership.kt` that will satisfy the following
+There are some prime values, p, for which there exists a positive integer, n
+, such that the expression n^3 + n^2(p) is a perfect cube.
+
+For example, when p=19, 8^3 + 8^2(19) = 12^3
+
+What is perhaps most surprising is that for each prime with this property the value of
+is unique, and there are only four such primes below one-hundred.
+
+How many primes below the command line input $n$ have this remarkable property?
+
+
+Upload your solution to https://euler.computing.dcu.ie/einstein/[_Einstein_].
+****
+
+.Example invocation
+----
+$ java -jar euler-131-prime-cube-partnership.jar 1000000
+----
+
+.Example standard output
+----
+173

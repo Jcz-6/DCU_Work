@@ -1,0 +1,44 @@
+////
+The format of this document is `asciidoc`, and it will be compiled with:
+
+   $ asciidoctor task-description.ascii
+
+This generates the HTML which will be included on the website.
+////
+
+// //////////////////////////////////////////////////////////////
+= Euler 48
+
+****
+Euler problem 48: https://projecteuler.net/problem=48[].
+****
+
+// //////////////////////////////////////////////////////////////
+== Go
+
+.Task
+****
+The command-line arguments consist of exactly one argument, a positive integer $n$.
+
+Write a Go script named `euler-48-self-powers.go` which writes the sum of numbers raised to the
+power of themselves which are less than and equal to $n$ 
+and output the last 10 digits to standard output.
+
+Upload your solution to https://euler.computing.dcu.ie/einstein/[_Einstein_].
+****
+
+.Example invocation
+----
+$ go run euler-48-self-powers.go 1000
+----
+
+.Example standard output
+----
+9110846700
+----
+
+.Explanation
+****
+The series 1^1 + 2^2 + ... + 10^10 = 10405071317
+****
+

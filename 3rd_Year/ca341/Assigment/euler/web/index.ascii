@@ -1,0 +1,107 @@
+= Project Euler
+:author: Stephen Blott"
+:email: stephen.blott@dcu.ie
+:toc: left
+:toc-title: Contents
+:toc-levels: 4
+
+//
+// It should not be necessary to make any changes to this file when
+// contributing new tasks.
+//
+// SB: 11/10/2023
+//
+
+****
+[quote,Project Euler]
+____
+Project Euler is a series of challenging mathematical/computer programming
+problems...
+
+[The problems are for] students for whom the basic curriculum is not feeding their hunger to learn...
+____
+
+Source: https://projecteuler.net/[].
+****
+
+****
+This is a database of _Einstein_ tasks for the _Euler_ programming problems.
+
+Here, you can:
+
+- tackle the programming problems, links below, and upload them to link:/einstein/[_Einstein_],
+- or _contribute your own markers_ for the _Euler_ problems (see below).
+****
+
+// //////////////////////////////////////////////////////////////
+== Contributing
+
+****
+See the link:./contributing.html[contributing page] for more information on how to contribute.
+
+This project is:
+
+- hosted on GitLab, here: https://gitlab.computing.dcu.ie/sblott/euler[], and
+- mirrored to GitHub, here: https://github.com/smblott-github/euler[].
+****
+
+////
+// I need to find a way for people to be credited with their contribution,
+// but without editing this file -- because that just creates merge
+// conflicts.
+//
+// For now... PLEASE DO NOT MAKE CHANGES HERE.  Thanks.  SB (11/10/2023).
+//
+.The following people have contributed to this project...
+****
+- Stephen Blott (stephen.blott@dcu.ie) +
+  `euler-1-multiples-of-3-or-5.py`
+- Sam McElligott (sam.mcelligott3@mail.dcu.ie) +
+  `euler-2-even-fibonacci-numbers.py` +
+  `euler-3-largest-prime-factor.py` +
+  `euler-4-largest-palindrome-product.py` +
+  `euler-5-smallest-multiple.py` +
+  `euler-6-sum-square-difference.py`
+- Michael Redmond (michael.redmond29@mail.dcu.ie) +
+  `euler-20-factorial-digit-sum.py` +
+  `euler-25-nth-digit-fibonacci-num.py`
+- Giuseppe Esposito (giuseppe.esposito2@mail.dcu.ie) +
+  `euler-22-names-scores.py`
+- Jamie Gorman (jamie.gorman24@mail.dcu.ie) +
+  `euler-8-largest-product-in-a-series.py`
+- Orlaith Quinn (orlaith.quinn22@mail.dcu.ie) +
+  `euler-29-distinct-powers.R`
+- Caoimhe Duignan (caoimhe.duignan8@mail.dcu.ie) +
+  `euler-4-largest-palindrome-product.r`
+- Martina Freed (martina.freed2@mail.dcu.ie) +
+  'euler-19-counting-sundays.java'
+
+When you make a contribution, add your name and the task to this list.
+****
+////
+
+// //////////////////////////////////////////////////////////////
+== Problems
+
+****
+If you attempt any of these tasks and find markers which you think are
+incorrect or otherwise inadequate, then please fix them.
+
+See the link:./contributing.html[contributing page] for more information on how to do this.
+****
+
+.Problems
+****
+include::problems.ascii[]
+****
+
+'''
+
+// //////////////////////////////////////////////////////////////
+//
+include::misc/instrument.txt[]
+include::misc/asciimath.txt[]
+
+////
+vim: ft=asciidoc
+////

@@ -1,0 +1,61 @@
+////
+The format of this document is `asciidoc`, and it will be compiled with:
+
+   $ asciidoctor task-description.ascii
+
+This generates the HTML which will be included on the website.
+////
+= Euler 74
+
+****
+Euler problem 74: https://projecteuler.net/problem=74[].
+****
+
+// //////////////////////////////////////////////////////////////
+== Prolog
+
+.Task
+****
+The number 145 is well known for the property that the sum of the factorial of its digits is equal to 145:
+
+1! + 4! + 5! = 1 + 24 + 120 = 145
+
+Perhaps less well known is 169, in that it produces the longest chain of numbers that link back to 
+169; it turns out that there are only three such loops that exist:
+
+169- > 363601 -> 1454 -> 169
+871 -> 45361 -> 871
+872 -> 45362 -> 872
+
+It is not difficult to prove that EVERY starting number will eventually get stuck
+in a loop, For example
+
+69 -> 363600 -> 1454- > 169 -> 363601 ( -> 1454)
+78 -> 45360 -> 871- > 45361 ( -> 871)
+540 -> 145 ( -> 145)
+
+How many chains, with a starting number below one million, contain exactly sixty non-repeating terms?
+
+Write a prolog programme named `euler-179-consecutive-positive-divisors.pl` that 
+calculates how many chains, with a starting number below one million, contain exactly
+sixty non-repeating term?
+
+
+Upload your solution to https://euler.computing.dcu.ie/einstein/[_Einstein_].
+****
+
+.Example invocation
+----
+$ swipl -s euler-74-digital-factorial-chains.pl -g "main(100,5)" -t halt
+----
+
+.Example standard output
+----
+2
+----
+
+.Explanation
+****
+There are 2 instances of a chain of 5 non repeating terms between with a starting number below 100 
+****
+

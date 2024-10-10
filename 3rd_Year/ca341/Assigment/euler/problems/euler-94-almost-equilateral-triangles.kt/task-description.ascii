@@ -1,0 +1,42 @@
+////
+The format of this document is `asciidoc`, and it will be compiled with:
+
+   $ asciidoctor task-description.ascii
+
+This generates the HTML which will be included on the website.
+////
+= Euler 94
+
+****
+Euler problem 94: https://projecteuler.net/problem=94[].
+****
+
+// //////////////////////////////////////////////////////////////
+== Go
+
+.Task
+****
+Write a Go script named `euler-94-almost-equilateral-triangles.kt`
+It is easily proved that no equilateral triangle exists with integral length sides and integral area.
+However, the almost equilateral triangle 5-5-6 has an area of 12 square units.
+
+We shall define an almost equilateral triangle to be a triangle for which
+two sides are equal and the third differs by no more than one unit.
+
+Find the sum of the perimeters of all almost equilateral triangles with integral side lengths and
+area and whose perimeters do not exceed the command line parameters $n$
+
+
+Upload your solution to https://euler.computing.dcu.ie/einstein/[_Einstein_].
+****
+
+.Example invocation
+----
+$ java -jar euler-94-almost-equilateral-triangles.jar 1000000000
+----
+
+.Example standard output
+----
+518408346
+----
+

@@ -1,0 +1,48 @@
+= Euler 168
+
+****
+Euler problem 168: https://projecteuler.net/problem=168[].
+****
+
+// //////////////////////////////////////////////////////////////
+== Kotlin
+
+.Task
+****
+The command-line arguments consist of exactly one argument, a positive integer $n$.
+
+Write a Kotlin script named `euler-168-number-rotation-sum.kt` which writes number indexed at the command line
+argument $n$ that finds all the last 5 numbers of the sum of all the
+digits with this property up to 10 ^ $n$ 
+
+Consider the number 142857 We can right-rotate this number by moving the last digit(7)
+to the front of it, giving us 714285
+It can be verified that 714285 = 5 x 142857
+
+This demonstrates an unusual property of 142857:it is a divisor of its right-rotation
+
+
+Find the last 5 digits of the sum of all integers n, 10 < n < 10^100, that have
+this property
+?
+
+Upload your solution to https://euler.computing.dcu.ie/einstein/[_Einstein_].
+****
+
+.Example invocation
+----
+$ go run euler-168-number-rotations.go 5
+----
+
+.Example standard output
+----
+555480
+----
+
+
+
+
+
+
+
+

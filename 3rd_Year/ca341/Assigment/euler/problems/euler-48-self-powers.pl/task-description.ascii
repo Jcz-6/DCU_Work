@@ -1,0 +1,41 @@
+////
+The format of this document is `asciidoc`, and it will be compiled with:
+
+   $ asciidoctor task-description.ascii
+
+This generates the HTML which will be included on the website.
+////
+= Euler 48
+
+****
+Euler problem 48: https://projecteuler.net/problem=48[].
+****
+
+// //////////////////////////////////////////////////////////////
+== Prolog
+
+.Task
+****
+The series, 1^1 + 2^2 + 3^3 + .... + 10^10 = 10405071317
+
+Write a prolog programme named `euler-179-consecutive-positive-divisors.pl` that finds
+the last ten digits of the series , 1^1 + 2^2 + 3^3 + .... + 1000^10000
+
+Upload your solution to https://euler.computing.dcu.ie/einstein/[_Einstein_].
+****
+
+.Example invocation
+----
+$ swipl -s euler-48-self-powers.pl -g "main(1000)" -t halt
+----
+
+.Example standard output
+----
+9110846700
+----
+
+.Explanation
+****
+The series 1^1 + 2^2 + ... + 1000^1000 = some number who's first 10 digits are 9110846700
+****
+

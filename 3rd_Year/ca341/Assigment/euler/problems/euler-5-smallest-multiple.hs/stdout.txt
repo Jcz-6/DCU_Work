@@ -1,0 +1,8 @@
+Linking euler-5-smallest-multiple ...
+12
+60
+60
+420
+840
+2520
+2520

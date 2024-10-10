@@ -1,0 +1,38 @@
+////
+The format of this document is `asciidoc`, and it will be compiled with:
+
+   $ asciidoctor task-description.ascii
+
+This generates the HTML which will be included on the website.
+////
+= Euler 13
+
+****
+Euler problem 13: https://projecteuler.net/problem=13[].
+****
+
+// //////////////////////////////////////////////////////////////
+== Go
+
+.Task
+****
+The command-line arguments consist of exactly one argument, a file containing 100 50 digit numbers.
+
+Write a Go script named `euler-13-large-sum.go` which sums up 100 50 digit numbers and
+returns the first 10 digits.
+
+Upload your solution to https://euler.computing.dcu.ie/einstein/[_Einstein_].
+****
+
+.Example invocation
+----
+$ go run euler-13-large-sum.go numbers.txt
+----
+
+.Example standard output
+----
+5537376230
+----
+
+
+

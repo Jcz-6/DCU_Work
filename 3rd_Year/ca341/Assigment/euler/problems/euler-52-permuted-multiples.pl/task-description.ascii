@@ -1,0 +1,35 @@
+////
+The format of this document is `asciidoc`, and it will be compiled with:
+
+   $ asciidoctor task-description.ascii
+
+This generates the HTML which will be included on the website.
+////
+= Euler 52
+
+****
+Euler problem 52: https://projecteuler.net/problem=52[].
+****
+
+// //////////////////////////////////////////////////////////////
+== Prolog
+
+.Task
+****
+The command-line arguments consist of exactly one argument, a positive integer $n$.
+
+Write a Prolog script named `euler-52-permutated-multiples.pl` that finds the $n$th number where
+it contains all the same digits while being multiplied by the numbers up to and including 6
+
+Upload your solution to https://euler.computing.dcu.ie/einstein/[_Einstein_].
+****
+
+.Example invocation
+----
+$ swipl -s euler-179-consecutive-positive-divisors.pl -g "main()" -t halt
+----
+
+.Example standard output
+----
+142858
+----

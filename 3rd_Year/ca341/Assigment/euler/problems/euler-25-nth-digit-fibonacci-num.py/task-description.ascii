@@ -1,0 +1,49 @@
+////
+The format of this document is `asciidoc`, and it will be compiled with:
+
+   $ asciidoctor task-description.ascii
+
+This generates the HTML which will be included on the website.
+////
+
+// //////////////////////////////////////////////////////////////
+= Euler 25
+
+****
+Euler problem 25: https://projecteuler.net/problem=25[].
+****
+
+// //////////////////////////////////////////////////////////////
+== Python
+
+.Task
+****
+Assume a single command-line argument, a non-negative integer $n$.
+
+Write a python script named `euler-25-nth-digit-fibonacci-num.py` which writes the index of the first term in the Fibonacci sequence to contain $n!$ digits to standard output.
+
+Upload your solution to https://euler.computing.dcu.ie/einstein/[_Einstein_].
+****
+
+.Example invocation
+----
+$ python3 euler-25-nth-digit-fibonacci-num.py 2
+----
+
+.Example standard output
+----
+7
+----
+
+.Explanation
+****
+$F_1 = 1$ +
+$F_2 = 1$ +
+$F_3 = 2$ +
+$F_4 = 3$ +
+$F_5 = 5$ +
+$F_6 = 8$ +
+#$F_7 = 13$# ← this is the first Fibonacci with two digits +
+$F_8 = 21$ +
+$F_9 = 34$
+****

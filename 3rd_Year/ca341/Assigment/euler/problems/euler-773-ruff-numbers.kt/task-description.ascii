@@ -1,0 +1,34 @@
+= Euler 773
+
+****
+Euler problem 773: https://projecteuler.net/problem=773[].
+****
+
+// //////////////////////////////////////////////////////////////
+== Kotlin
+
+.Task
+****
+The command-line arguments consist of exactly one argument, a positive integer $n$.
+
+Write a Go script named `euler-773-ruff-numbers.kt` that adds $n$ integers that are prime
+and end in 7 to a set containing {2, 5}. A ruff numbers is one that cannot divide a number in this set.
+Find and the ruff numbers that end in 7 in the range of the product of the numbers in the set.
+
+Upload your solution to https://euler.computing.dcu.ie/einstein/[_Einstein_].
+****
+
+.Example invocation
+----
+$ java -jar euler-773-ruff-numbers.jar 3
+----
+
+.Example standard output
+----
+76101452
+----
+
+.Explanation
+****
+S(3) = {2, 5, 7, 17, 37} = (product = 44030) = (sum below product = 7610145)
+****
