@@ -1,0 +1,102 @@
+// Chat.js
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { useParams } from 'react-router-dom';
+import '../chat.css'
+
+function VetChat() {
+  const { id } = useParams();
+  const [message, setMessage] = useState('');
+  const [messagesList, setMessagesList] = useState([]);
+  const [socket, setSocket] = useState(null);
+  const [username, setUsername] = useState('');
+  const [user, setUser] = useState('');
+
+  useEffect(() => {
+    const loadUser = async () => {
+      try {
+        const res = await axios.get(`${import.meta.env.VITE_REACT_APP_API_URL}/profile/user`);
+        if (!res.data.error) {
+          setUsername(res.data.username);
+        }
+      } catch (error) {
+        console.error("Error loading user profile:", error);
+      }
+    };
+
+    const loadVet = async () => {
+      try {
+        const res = await axios.get(`${import.meta.env.VITE_REACT_APP_API_URL}/profile/vets/${id}`);
+        setUser(res.data);
+      } catch (error) {
+        console.error("Error loading vet:", error);
+      }
+    };
+
+    loadUser();
+    loadVet();
+
+    const newSocket = new WebSocket("ws://localhost:8080");
+    newSocket.onopen = () => {
+      newSocket.send(JSON.stringify({ room: id }));
+    };
+
+    newSocket.onmessage = (event) => {
+      const newMessage = event.data;
+      setMessagesList((prevMessages) => {
+        const updatedMessages = [...prevMessages, newMessage];
+        localStorage.setItem('messages', JSON.stringify(updatedMessages));
+        return updatedMessages;
+      });
+    };
+
+    setSocket(newSocket);
+
+    return () => {
+      newSocket.close();
+    };
+  }, [id]);
+
+  const handleSend = () => {
+    if (socket && socket.readyState === WebSocket.OPEN) {
+      socket.send(username + ": " + message);
+      setMessage('');
+    }
+  };
+
+  return (
+    <div className="chat-container">
+      <div className="chat-header">
+        <h3>Messages from {user.name}</h3>
+      </div>
+      <div className="logged-in-user">
+        <p>Logged in as: {username} Vet</p>
+      </div>
+      <div className="message-container">
+        <ul className="message-list">
+          {messagesList.map((msg, index) => (
+            <li className="message-item" key={index}>
+              {msg}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="message-input-container">
+        <input
+          type="text"
+          className="message-input"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          placeholder="Type your message"
+        />
+        <button className="send-button" onClick={handleSend}>
+          Send Message
+        </button>
+      </div>
+    </div>
+  );
+  
+  
+}
+
+export default VetChat;
