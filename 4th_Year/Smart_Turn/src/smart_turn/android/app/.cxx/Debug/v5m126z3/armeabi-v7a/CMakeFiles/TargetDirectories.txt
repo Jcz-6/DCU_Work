@@ -1,0 +1,2 @@
+C:/Users/joshc/project/2025-csc1097-caseyj-24-czernij-2/src/smart_turn/android/app/.cxx/Debug/v5m126z3/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/joshc/project/2025-csc1097-caseyj-24-czernij-2/src/smart_turn/android/app/.cxx/Debug/v5m126z3/armeabi-v7a/CMakeFiles/rebuild_cache.dir

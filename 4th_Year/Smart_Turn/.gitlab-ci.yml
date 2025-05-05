@@ -1,0 +1,110 @@
+image: ghcr.io/cirruslabs/flutter
+
+stages:          
+  - build
+  - test
+
+build-job:
+  stage: build
+  script:
+    - echo "Compiling the code..."
+    - cd src/smart_turn
+    - flutter pub get
+    - echo "Compile complete."
+  rules:
+    - if: $CI_COMMIT_BRANCH == "flutter"
+    - if: $CI_COMMIT_BRANCH == "Testing"
+    - if: $CI_COMMIT_BRANCH == "main" 
+  timeout: 300s
+
+arduino-env-build:
+  stage: build
+  image: python:3.9
+  script:
+    - echo "Setting up Arduino environment..."
+    - pip install -U platformio
+    - platformio platform install native
+    - cd src/arduino_blue/tests
+    - platformio run -e native
+    - echo "Arduino environment setup complete."
+  artifacts:
+    paths:
+      - src/arduino_blue/tests
+    expire_in: 1 week
+  rules:
+    - if: $CI_COMMIT_BRANCH == "flutter"
+    - if: $CI_COMMIT_BRANCH == "Testing"
+    - if: $CI_COMMIT_BRANCH == "main"
+  timeout: 300s
+
+unit-test-job:   
+  stage: test
+  image: ghcr.io/cirruslabs/flutter
+  script:
+    - echo "Running unit tests... This will take about 10 seconds."
+    - cd src/smart_turn
+    - flutter test
+    - echo "Testing Complete"
+  rules:
+    - if: $CI_COMMIT_BRANCH == "flutter"
+    - if: $CI_COMMIT_BRANCH == "Testing"   
+    - if: $CI_COMMIT_BRANCH == "main"    
+ 
+
+ble-test-job:   
+  stage: test
+  image: ghcr.io/cirruslabs/flutter
+  script:
+    - echo "Running Bluetooth tests"
+    - cd src/smart_turn/test
+    - flutter test ble_test.dart
+    - echo "Testing Bluetooth Complete"
+  rules:
+    - if: $CI_COMMIT_BRANCH == "flutter"
+    - if: $CI_COMMIT_BRANCH == "Testing"   
+    - if: $CI_COMMIT_BRANCH == "main"  
+
+
+geo-test-job:   
+  stage: test
+  image: ghcr.io/cirruslabs/flutter
+  script:
+    - echo "Running GeoLocation tests"
+    - cd src/smart_turn/test
+    - flutter test geo_test.dart
+    - echo "Testing GeoLocation Complete"
+  rules:
+    - if: $CI_COMMIT_BRANCH == "flutter"
+    - if: $CI_COMMIT_BRANCH == "Testing"   
+    - if: $CI_COMMIT_BRANCH == "main"  
+
+
+ui-test-job:   
+  stage: test
+  image: ghcr.io/cirruslabs/flutter
+  script:
+    - echo "Running UI tests"
+    - cd src/smart_turn/test
+    - flutter test widget_test.dart
+    - echo "Testing UI Complete"
+  rules:
+    - if: $CI_COMMIT_BRANCH == "flutter"
+    - if: $CI_COMMIT_BRANCH == "Testing"   
+    - if: $CI_COMMIT_BRANCH == "main" 
+
+
+arduino-test-job:
+  stage: test
+  image: python:3.9
+  script:
+    - echo "Running Arduino unit tests..."
+    - pip install -U platformio  #Just in case 
+    - cd src/arduino_blue/tests
+    - platformio test -e native
+    - echo "Arduino Testing Complete"
+  dependencies:
+    - arduino-env-build # Depend on the previous build job or just put it all in one Jakub?? Test
+  rules:
+    - if: $CI_COMMIT_BRANCH == "flutter"
+    - if: $CI_COMMIT_BRANCH == "Testing"   
+    - if: $CI_COMMIT_BRANCH == "main"
